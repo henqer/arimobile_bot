@@ -3,7 +3,7 @@ const path = require('path');
 const fs = require('fs');
 const data = require('./data.json');
 
-const token = '7820501883:AAFE96vIZZKIqQhFvL7n0Ul2UJMmaihumZY';
+const token = process.env.TOKEN || '7820501883:AAFE96vIZZKIqQhFvL7n0Ul2UJMmaihumZY';
 const bot = new TelegramBot(token, { polling: true });
 
 const damageMap = data.damageTypesMap;
